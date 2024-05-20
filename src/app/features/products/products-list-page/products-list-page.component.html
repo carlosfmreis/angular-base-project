@@ -1,0 +1,9 @@
+<h1>{{ "products" | translate }}</h1>
+
+<ul>
+  <ng-container *ngFor="let item of products; trackBy: trackById">
+    <li>
+      <a [routerLink]="productDetailsRoute(item.id)">{{ item.title }}</a>
+    </li>
+  </ng-container>
+</ul>

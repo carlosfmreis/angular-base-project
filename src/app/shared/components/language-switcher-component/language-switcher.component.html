@@ -1,0 +1,7 @@
+<ng-container *ngFor="let item of availableLanguages">
+  <span
+    [ngClass]="{ selected: item == currentLanguage }"
+    (click)="setLanguage(item)"
+    >{{ item }}</span
+  >
+</ng-container>

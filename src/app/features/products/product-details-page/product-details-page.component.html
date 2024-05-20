@@ -1,0 +1,7 @@
+<a [routerLink]="productsPageLink">{{ "goBack" | translate }}</a>
+
+<h1>{{ product?.title }} - ${{ product?.price }}</h1>
+
+<p>{{ product?.description }}</p>
+
+<img [src]="product?.image" [alt]="product?.title" />
