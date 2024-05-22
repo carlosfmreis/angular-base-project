@@ -3,7 +3,7 @@ import { AppEvent } from '../data/event.enum';
 
 @Injectable()
 export class EventsService {
-  readonly event: EventEmitter<AppEvent> = new EventEmitter<AppEvent>();
+  readonly events: EventEmitter<AppEvent> = new EventEmitter<AppEvent>();
 
   constructor() {}
 }
