@@ -18,14 +18,11 @@ export class ProductsListPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this._productsSubscription?.unsubscribe();
-    this._productsSubscription = this._productsService.getAll().subscribe({
-      next: (value) => {
+    this._productsSubscription = this._productsService
+      .getAll()
+      .subscribe((value) => {
         this.products = value;
-      },
-      error: (error) => {
-        alert(error);
-      },
-    });
+      });
   }
 
   ngOnDestroy(): void {
